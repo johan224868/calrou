@@ -195,7 +195,33 @@
 <script type="module">
 	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-	createChat({
-		webhookUrl: 'https://discrepantly-asconoid-merri.ngrok-free.dev/webhook/1a6a2f71-1b3f-42e0-a86a-15228c1904cd/chat'
-	});
+createChat({
+	webhookUrl: 'https://discrepantly-asconoid-merri.ngrok-free.dev/webhook/1a6a2f71-1b3f-42e0-a86a-15228c1904cd/chat',
+	webhookConfig: {
+		method: 'POST',
+		headers: {}
+	},
+	target: '#n8n-chat',
+	mode: 'window',
+	chatInputKey: 'chatInput',
+	chatSessionKey: 'sessionId',
+	loadPreviousSession: true,
+	metadata: {},
+	showWelcomeScreen: false,
+	defaultLanguage: 'en',
+	initialMessages: [
+		'Hola! 👋',
+		'mi nombre. es claroIA en que puedo ayudarte?'
+	],
+	i18n: {
+		en: {
+			title: 'Hola! 👋',
+			subtitle: "Inicia el chat, estoy 24/7.",
+			footer: '',
+			getStarted: 'Nueva conversacion',
+			inputPlaceholder: 'Escribe tu pregunta....',
+		},
+	},
+	enableStreaming: false,
+});
 </script>            
