@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Claro - Soluciones & Servicios</title>
+  <meta name="description" content="Página corporativa de Claro - Servicios móviles, Internet, TV y soluciones empresariales." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+  <style>
+    :root{
+      --claro-red: #e60012;
+      --muted:#6b6b6b;
+      --bg:#ffffff;
+      --surface:#f8f8f9;
+      --maxwidth:1100px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#111;line-height:1.45}
+    header{background:linear-gradient(90deg, rgba(230,0,18,0.08), rgba(230,0,18,0.02));border-bottom:1px solid #eee}
+    .container{max-width:var(--maxwidth);margin:0 auto;padding:24px}
+
+    /* Navbar */
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:42px;height:42px;background:var(--claro-red);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{color:#111;text-decoration:none;font-weight:600}
+    .cta{background:var(--claro-red);color:#fff;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:700}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 440px;gap:32px;align-items:center;padding:48px 0}
+    .hero h1{font-size:36px;margin:0 0 12px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .features{display:flex;gap:12px;flex-wrap:wrap}
+    .card{background:var(--surface);padding:14px;border-radius:12px;min-width:140px}
+
+    /* Services */
+    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:28px 0}
+    .service{background:#fff;padding:20px;border-radius:12px;border:1px solid #eee}
+    .service h3{margin:0 0 8px}
+    .service p{margin:0;color:var(--muted)}
+
+    /* Testimonials */
+    .testimonials{display:flex;gap:12px;overflow:auto;padding-bottom:8px}
+    .testimonial{min-width:260px;background:#fff;padding:16px;border-radius:12px;border:1px solid #eee}
+
+    /* Contact */
+    .contact{display:grid;grid-template-columns:1fr 380px;gap:18px;margin:36px 0}
+    form{display:flex;flex-direction:column;gap:10px}
+    input, textarea, select{padding:10px;border:1px solid #ddd;border-radius:8px;font-size:14px}
+    button{background:var(--claro-red);color:#fff;padding:12px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+
+    footer{background:#111;color:#fff;padding:28px 0;margin-top:36px}
+    footer a{color:#fff;text-decoration:none}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .contact{grid-template-columns:1fr}
+      nav ul{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">C</div>
+        <div>
+          <div style="font-weight:800;">Claro</div>
+          <small style="color:var(--muted);font-size:13px">Conectividad que impulsa tu mundo</small>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#empresas">Empresas</a></li>
+          <li><a href="#soporte">Soporte</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="#contacto">Contrata ahora</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <h1 id="hero-title">Conectividad, entretenimiento y soluciones para tu vida y tu empresa</h1>
+        <p>Planes móviles, Internet hogar de alta velocidad, televisión y soluciones empresariales en un solo lugar. Confianza, cobertura y soporte 24/7.</p>
+        <div class="features" role="list">
+          <div class="card" role="listitem"><strong>Red 4G/5G</strong><div style="color:var(--muted);font-size:13px">Cobertura amplia y baja latencia</div></div>
+          <div class="card" role="listitem"><strong>Internet Hogar</strong><div style="color:var(--muted);font-size:13px">Fija, fibra óptica y velocidades simétricas</div></div>
+          <div class="card" role="listitem"><strong>TV & Streaming</strong><div style="color:var(--muted);font-size:13px">Entretenimiento para toda la familia</div></div>
+        </div>
+        <p style="margin-top:18px"><a href="#servicios" style="text-decoration:none;margin-right:12px">Ver servicios</a><a href="#contacto" class="cta">Habla con un asesor</a></p>
+      </div>
+      <aside style="background:linear-gradient(180deg, #fff, #fff);padding:20px;border-radius:12px;border:1px solid #eee">
+        <h3 style="margin-top:0">Promoción destacada</h3>
+        <p style="color:var(--muted)">Fibra 300 Mbps + TV por 6 meses sin costo adicional. Aplica términos y condiciones.</p>
+        <ul style="padding-left:18px;color:var(--muted);margin-top:8px">
+          <li>Instalación gratuita</li>
+          <li>Soporte técnico 24/7</li>
+          <li>Pago en línea y sucursal</li>
+        </ul>
+        <p style="margin-top:12px"><a href="#contacto" class="cta">Solicitar promoción</a></p>
+      </aside>
+    </section>
+
+    <section id="servicios">
+      <h2>Servicios</h2>
+      <div class="services">
+        <article class="service">
+          <h3>Móvil</h3>
+          <p>Planes prepago y pospago con datos, llamadas y roaming. Opciones para personas y empresas.</p>
+        </article>
+        <article class="service">
+          <h3>Internet Hogar</h3>
+          <p>Fibra óptica hasta 1 Gbps. Paquetes con internet, TV y teléfono.</p>
+        </article>
+        <article class="service">
+          <h3>Televisión</h3>
+          <p>Canales en vivo, paquetes premium y streaming bajo demanda.</p>
+        </article>
+        <article class="service">
+          <h3>Soluciones Empresariales</h3>
+          <p>Conectividad dedicada, nube, seguridad y soluciones IoT para tu empresa.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="empresas">
+      <h2>Soluciones para empresas</h2>
+      <p style="color:var(--muted)">Servicios diseñados para mantener tu negocio conectado y protegido.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px">
+        <div class="service">
+          <h3>Conectividad Dedicada</h3>
+          <p>Enlaces empresariales con SLA y prioridad en la red.</p>
+        </div>
+        <div class="service">
+          <h3>Seguridad Gestionada</h3>
+          <p>Firewalls, VPN y monitoreo 24/7.</p>
+        </div>
+        <div class="service">
+          <h3>IoT & M2M</h3>
+          <p>Plataformas y conectividad para dispositivos industriales y logísticos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonios" style="margin-top:28px">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <div class="testimonials" aria-live="polite">
+        <div class="testimonial">
+          <strong>María G.</strong>
+          <p style="color:var(--muted);font-size:14px">"Excelencia en atención y la fibra funciona perfectamente desde la instalación."</p>
+        </div>
+        <div class="testimonial">
+          <strong>Empresa X</strong>
+          <p style="color:var(--muted);font-size:14px">"La solución IoT nos permitió optimizar inventario y reducir pérdidas."</p>
+        </div>
+        <div class="testimonial">
+          <div style="font-weight:700">Pedro L.</div>
+          <p style="color:var(--muted);font-size:14px">"Soporte técnico ágil y claro. Recomendado."</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <div class="contact">
+        <div>
+          <p style="color:var(--muted)">¿Listo para contratar o quieres más información? Completa este formulario y un asesor se comunicará contigo.</p>
+          <form action="#" method="post" aria-label="Formulario de contacto">
+            <input type="text" name="nombre" placeholder="Nombre completo" required>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <input type="tel" name="telefono" placeholder="Teléfono" inputmode="tel">
+            <select name="interes" aria-label="Interés">
+              <option value="">Selecciona un servicio</option>
+              <option value="movil">Móvil</option>
+              <option value="internet">Internet Hogar</option>
+              <option value="tv">Televisión</option>
+              <option value="empresas">Soluciones empresariales</option>
+            </select>
+            <textarea name="mensaje" rows="4" placeholder="Tu mensaje (opcional)"></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+        <aside style="background:#fff;padding:18px;border-radius:12px;border:1px solid #eee">
+          <h3 style="margin-top:0">Atención al cliente</h3>
+          <p style="color:var(--muted)">Tel: +
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+		webhookUrl: 'https://discrepantly-asconoid-merri.ngrok-free.dev/webhook/1a6a2f71-1b3f-42e0-a86a-15228c1904cd/chat'
+	});
+</script>            
